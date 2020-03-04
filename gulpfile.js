@@ -12,7 +12,7 @@ const sass = require('gulp-sass');
       }
   });
   watch("./*.html").on('change', browserSync.reload);
-  watch("./sass/**/*.html", serveSass);
+  watch("./sass/**/*.sass", serveSass);
   watch("./js/*.js").on('change', browserSync.reload);
 };
 

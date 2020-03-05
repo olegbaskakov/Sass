@@ -331,6 +331,7 @@ template {
 
 .nav__item {
   color: #fff;
+  text-decoration: none;
   text-transform: uppercase;
   margin-right: 40px; }
 

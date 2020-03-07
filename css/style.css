@@ -342,6 +342,29 @@ template {
   max-width: 1256px;
   margin: auto; }
 
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Futura Book', sans-serif;
+  font-size: 14px; }
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive; }
+  .section-title__img {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .section-title__img::before, .section-title__img::after {
+      content: '';
+      margin: 0 10px;
+      width: 32px;
+      height: 2px;
+      background-color: #E3B873;
+      border-radius: 1px; }
+
 .header {
   position: fixed;
   top: 0;
@@ -388,6 +411,8 @@ template {
   .hero::before {
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
@@ -460,10 +485,3 @@ template {
   line-height: 53px; }
   .title--primary {
     color: #E3B873; }
-
-*, *:before, *:after {
-  box-sizing: border-box; }
-
-body {
-  font-family: 'Futura Book', sans-serif;
-  font-size: 14px; }

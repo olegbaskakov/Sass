@@ -323,7 +323,8 @@ template {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 1rem; }
   .button--primary {
     border: 1px solid #E3B873;
     background-color: #E3B873;
@@ -344,6 +345,9 @@ template {
 
 *, *:before, *:after {
   box-sizing: border-box; }
+
+html {
+  font-size: 14px; }
 
 body {
   font-family: 'Futura Book', sans-serif;
@@ -387,7 +391,7 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 40px;
+  margin-right: 2.85rem;
   transition: color 0,2s; }
   .nav__item:hover {
     color: #E3B873; }
@@ -429,8 +433,8 @@ body {
     align-items: center;
     left: 0;
     bottom: 0;
-    min-width: 247px;
-    min-height: 97px;
+    min-width: 17.6rem;
+    min-height: 6.92rem;
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
@@ -446,14 +450,12 @@ body {
       background: url(../img/arrow-down.svg) no-repeat center; }
   .hero__content {
     position: relative;
-    max-width: 670px;
-    margin: 0;
-    margin-bottom: 20px; }
+    max-width: 47.85rem;
+    margin-left: 4.28rem; }
   .hero__text {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.57rem;
     max-width: 500px;
-    margin-bottom: 40px; }
+    margin-bottom: 2.28rem; }
   .hero__button {
     margin-right: 20px; }
 
@@ -481,7 +483,44 @@ body {
   margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
-  font-size: 40px;
-  line-height: 53px; }
+  font-size: 2.857rem; }
   .title--primary {
     color: #E3B873; }
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px; }
+  .nav__item {
+    margin-right: 1rem; } }
+
+@media screen and (max-width: 992px) {
+  .nav {
+    display: none; }
+  .hero__instagram {
+    display: none; }
+  .hero__content {
+    margin-left: 0; } }
+
+@media screen and (max-width: 570px) {
+  .contacts__phone {
+    margin-right: 0;
+    color: #fff;
+    text-decoration: none; }
+  .contacts__button {
+    display: none; }
+  .title {
+    font-size: 1.64rem; }
+  .hero__scroll-down {
+    display: none; }
+  .hero__content {
+    max-width: 22.86rem; }
+  .hero__text {
+    font-size: 1.29rem; }
+  .hero__button {
+    display: block;
+    min-width: 22.86rem;
+    margin-bottom: 1.85rem; } }
+
+@media screen and (max-height: 550px) {
+  .hero__scroll-down {
+    display: none; } }

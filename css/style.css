@@ -386,15 +386,16 @@ body {
   align-items: center; }
 
 .logo {
-  font-size: 1.07rem;
+  font-size: 1.06rem;
   color: #E3B873;
   text-transform: uppercase; }
 
 .nav__item {
+  font-size: 1.06rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.65rem;
+  margin-right: 2.1rem;
   transition: color 0.2s; }
   .nav__item:nth-child(6) {
     margin: 0; }
@@ -405,7 +406,8 @@ body {
   color: #E3B873; }
 
 .contacts__phone {
-  margin-right: 40px; }
+  font-size: 1.06rem;
+  margin-right: 2rem; }
 
 .contacts__button {
   margin: 0; }
@@ -413,7 +415,7 @@ body {
 .hero {
   position: relative;
   display: flex;
-  padding-top: 84px;
+  padding-top: 82px;
   height: 100vh;
   color: #fff; }
   .hero::after {
@@ -537,17 +539,22 @@ body {
   .contacts__button {
     display: none; }
   .title {
+    max-width: 20rem;
     font-size: 1.64rem; }
-  .hero__scroll-down {
-    display: none; }
-  .hero__content {
-    max-width: 22.86rem; }
-  .hero__text {
-    font-size: 1.29rem; }
-  .hero__button {
-    display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+  .hero {
+    padding-top: 64px; }
+    .hero__scroll-down {
+      display: none; }
+    .hero__content {
+      padding: 0; }
+    .hero__text {
+      max-width: 28.57rem;
+      font-size: 1.29rem; }
+    .hero__button {
+      max-width: 100%;
+      display: block;
+      width: 40rem;
+      margin-bottom: 1.85rem; } }
 
 @media screen and (max-height: 600px) {
   .hero__scroll-down {

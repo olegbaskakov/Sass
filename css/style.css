@@ -573,14 +573,16 @@ img {
   text-transform: uppercase;
   background-color: #E3B873; }
 
-.design__section-title {
-  margin-bottom: 3.3rem; }
-
-.design__text {
-  max-width: 740px; }
-
-.design__pricetag {
-  padding: 1.214rem 5.4rem 1.214rem 2.357rem; }
+.design {
+  padding: 40px 0;
+  background: linear-gradient(to bottom, #fff 52%, #131313 48%);
+  position: relative; }
+  .design__section-title {
+    margin-bottom: 3.3rem; }
+  .design__text {
+    max-width: 740px; }
+  .design__pricetag {
+    padding: 1.214rem 5.4rem 1.214rem 2.357rem; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -599,6 +601,14 @@ img {
     margin-left: 0; } }
 
 @media screen and (max-width: 760px) {
+  .design {
+    background: #131313; }
+    .design__section-title {
+      color: #fff; }
+    .design__text {
+      margin: 1.5rem auto;
+      font-size: 1.1rem;
+      line-height: 1.7rem; }
   .row {
     flex-direction: column;
     align-items: center; }

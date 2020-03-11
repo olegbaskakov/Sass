@@ -373,6 +373,13 @@ img {
       height: 2px;
       background-color: #E3B873;
       border-radius: 1px; }
+  .section-title__text {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.42rem;
+    line-height: 1.92rem;
+    font-family: 'Futura Book', sans-serif;
+    text-transform: none; }
 
 .header {
   position: fixed;
@@ -518,8 +525,10 @@ img {
   .title--primary {
     color: #E3B873; }
 
-.types__section-title {
-  margin-bottom: 2rem; }
+.types {
+  padding: 100px 0; }
+  .types__section-title {
+    margin-bottom: 2rem; }
 
 .row {
   display: flex;
@@ -563,6 +572,16 @@ img {
   color: #fff;
   text-transform: uppercase;
   background-color: #E3B873; }
+
+.design__section-title {
+  margin-bottom: 3.3rem; }
+
+.design__text {
+  max-width: 740px;
+  margin-top: 1.2rem; }
+
+.design__pricetag {
+  padding: 1.214rem 5.4rem 1.214rem 2.357rem; }
 
 @media screen and (max-width: 1200px) {
   html {

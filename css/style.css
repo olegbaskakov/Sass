@@ -374,7 +374,7 @@ img {
       background-color: #E3B873;
       border-radius: 1px; }
   .section-title__text {
-    margin: 0 auto;
+    margin: 1.2rem auto;
     text-align: center;
     font-size: 1.42rem;
     line-height: 1.92rem;
@@ -577,8 +577,7 @@ img {
   margin-bottom: 3.3rem; }
 
 .design__text {
-  max-width: 740px;
-  margin-top: 1.2rem; }
+  max-width: 740px; }
 
 .design__pricetag {
   padding: 1.214rem 5.4rem 1.214rem 2.357rem; }

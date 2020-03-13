@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const modal = document.querySelector('.modal');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
   const closeBtn = document.querySelector('.modal__close');
-  const closeEsc = document.querySelector('keyCode=27');
+  const closeModal = document.querySelector('.modal__popup');
   const switchModal = () => {
     modal.classList.toggle('modal--visible');
   }
@@ -11,7 +11,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     element.addEventListener('click', switchModal);
   });
 
+
+  console.log(event);
+
+  
+
   closeBtn.addEventListener('click', switchModal);
-  closeEsc.addEventListener('click', switchModal);
+  closeModal.addEventListener('click', switchModal);
+  
 
 });

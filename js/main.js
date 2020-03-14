@@ -7,23 +7,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   const closeModal = (event) => {
-    if (event.target === modal)
+    if (event.target === modal || event.keyCode  === 27);
       modal.classList.remove('modal--visible');
   }
-
-  
  
-
- 
-
-  
-
   modalBtn.forEach(element => {
     element.addEventListener('click', switchModal);
   });
 
-
   closeBtn.addEventListener('click', switchModal);
   modal.addEventListener('click', closeModal);
-
+  document.addEventListener('keydown', closeModal);
 });

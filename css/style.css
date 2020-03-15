@@ -387,6 +387,25 @@ template {
     cursor: pointer;
     margin-right: 0.64rem; }
 
+.upbutton {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  bottom: 30px;
+  right: 1%;
+  cursor: pointer;
+  z-index: 999; }
+  .upbutton__title {
+    margin: 0; }
+  .upbutton::before {
+    content: '';
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background: url("../img/up.svg") no-repeat center; }
+
 .container {
   width: 85%;
   max-width: 1256px;

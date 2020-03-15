@@ -54,8 +54,7 @@
       cursor: pointer
       margin-right: 0.64rem
 .upbutton
-  display: flex
-  align-items: center
+  display: none
   position: fixed
   align-items: center
   padding: 0.6rem 1rem
@@ -64,9 +63,12 @@
   cursor: pointer
   z-index: 999
   &__title
+    float: left
+    line-height: 2rem
     margin: 0
   &::before
     content: ''
+    float: left
     margin-right: 1rem
     width: 2rem
     height: 2rem

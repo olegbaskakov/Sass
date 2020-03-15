@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function(event) { 
   const modal = document.querySelector('.modal');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
@@ -18,4 +19,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
   closeBtn.addEventListener('click', switchModal);
   modal.addEventListener('click', closeModal);
   document.addEventListener('keydown', closeModal);
+});
+*/
+
+$(document).ready(function () {
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close');
+
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+
+  modal.on('click', function (event) {
+    if( $(event.target).is('.modal')) {
+		modal.removeClass('modal--visible');
+		}
+  });
+
+  $(document).keydown(function(event){
+    if(event.which=='27'){
+      modal.removeClass('modal--visible');
+    }
+  });
+
 });

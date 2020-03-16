@@ -487,13 +487,15 @@ img {
       line-height: 2.07rem;
       font-family: 'Futura Book', sans-serif;
       text-transform: none; }
+      .section-title__text-slide {
+        padding-right: 2rem; }
 
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
   background-color: #131313;
   padding: 24px 0; }
 
@@ -745,7 +747,8 @@ img {
   flex-wrap: wrap;
   margin-bottom: 5.3rem; }
   .swiper-slide__text {
-    flex-basis: 38%;
+    flex-basis: 31%;
+    margin-right: 1.5rem;
     padding-bottom: 1.8rem; }
   .swiper-slide__heading {
     margin-bottom: 0.4rem;
@@ -858,7 +861,9 @@ img {
       max-width: 100%;
       display: block;
       width: 40rem;
-      margin-bottom: 1.85rem; } }
+      margin-bottom: 1.85rem; }
+  .swiper-slide__text {
+    flex-basis: 40%; } }
 
 @media screen and (max-height: 600px) {
   .hero__scroll-down {

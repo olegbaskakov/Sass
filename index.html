@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
@@ -49,6 +50,88 @@
       <a href="#" class="hero__scroll-down">листайте вниз</a>
     </section>
     <!-- hero -->
+    <section class="section section--dark project">
+      <div class="container">
+        <div class="row">
+          <div class="col-left">
+            <div class="section-title section-title--left">
+              <h2 class="section-title__heading section-title__heading--primary">Завершенные  <span class="section-title__word" >проекты</span></h2>
+             <!-- /.section-title__heading -->
+              <p class="section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
+            </div>
+            <!-- /.section-title --> 
+            <!-- Slider main container -->
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper swiper-no-swiping">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__text">
+                      <h2 class="swiper-slide__heading">Город</h2>
+                      <!-- /.swiper-slide__heading -->
+                      <span class="swiper-slide__value">Ростов-на-Дону</span>
+                      <span class="swiper-slide__value">ЖК Адмирал</span> 
+                      <!-- /.swiper-slide__value -->
+                    </div>
+                    <!-- /.swiper-slide__text -->
+                    <div class="swiper-slide__text">
+                      <h2 class="swiper-slide__heading">Площадь:</h2>
+                      <!-- /.swiper-slide__heading -->
+                      <span class="swiper-slide__value">81 м2</span> 
+                      <!-- /.swiper-slide__value -->
+                    </div>
+                    <!-- /.swiper-slide__text -->
+                    <div class="swiper-slide__text">
+                      <h2 class="swiper-slide__heading">Срок ремонта:</h2>
+                      <!-- /.swiper-slide__heading -->
+                      <span class="swiper-slide__value">3,5 месяца</span> 
+                      <!-- /.swiper-slide__value -->
+                    </div>
+                    <!-- /.swiper-slide__text -->
+                    <div class="swiper-slide__text">
+                      <h2 class="swiper-slide__heading">Стоимость:</h2>
+                      <!-- /.swiper-slide__heading -->
+                      <span class="swiper-slide__value">По запросу</span> 
+                      <!-- /.swiper-slide__value -->
+                    </div>
+                    <!-- /.swiper-slide__text -->
+                  </div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+              </div>
+              
+            
+              <div class="swiper-slide__navigation">
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              <!-- /.navigation -->
+            
+            </div>
+          </div>
+          <!-- /.col-50 -->
+          <div class="col-right">
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper swiper-no-swiping">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="img/projects/project1.jpg" alt="Дизайн квартиры"></div>
+                  <div class="swiper-slide"><img src="img/projects/project1.jpg" alt="Дизайн квартиры"></div>
+                  <div class="swiper-slide"><img src="img/projects/project1.jpg" alt="Дизайн квартиры"></div>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-50 -->
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section section--dark project -->
+
     <section class="section control">
       <div class="container">
         <div class="section-title">
@@ -64,7 +147,7 @@
     </section>
     <!-- /.section control -->
 
-    <div class="section types" data-vide-bg="video/river">
+    <div class="section types"></div>
       <div class="container">
         <div class="section-title types__section-title">
           <h2 class="section-title__heading">Виды ремонта</h2>
@@ -76,7 +159,7 @@
         </div>
         <!-- /.section-title -->
         <div class="row">
-          <div class="col">
+          <div class="col-30">
             <div class="card types__card">
               <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__img">
               <div class="card__text">
@@ -109,7 +192,7 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
-          <div class="col">
+          <div class="col-30">
             <div class="card types__card">
               <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__img">
               <div class="card__text">
@@ -141,7 +224,7 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
-          <div class="col">
+          <div class="col-30">
             <div class="card types__card">
               <img src="img/types/type-3.jpg" alt="" class="card__img">
               <div class="card__text">
@@ -329,7 +412,7 @@
   </button>
   <!-- ./upbutton -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/jquery.vide.min.js"></script>
 </body>
 </html>

@@ -58,4 +58,22 @@ $(document).ready(function () {
     $('html, body').stop().animate({scrollTop : 0}, 300);
   });
 
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  });
+
+  var next = $('.swiper-button-next');
+  var prev = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination');
+
+  next.css('left', prev.width() + 17 + bullets.width() +17);
+  bullets.css('left', prev.width() +17);
 });

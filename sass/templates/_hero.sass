@@ -32,6 +32,9 @@
     text-decoration: none
     line-height: 1
     color: $light
+    animation: scrollBounce
+    animation-duration: 0.5s
+    animation-delay: 1s
     &::after
       content: ''
       margin-left: 14px
@@ -61,6 +64,9 @@
     position: relative
     margin: 0
     margin-bottom: 1.2rem
+    animation: heroRight
+    animation-duration: 1s
+    animation-timing-function: ease
   &__text
     position: relative
     font-size: 1.57rem
@@ -68,9 +74,16 @@
     max-width: 500px
     margin: 0
     margin-bottom: 3rem
+    animation: heroRight
+    animation-duration: 1s
+    animation-timing-function: ease
+  &__buttons
+    animation: heroRight
+    animation-duration: 1s
+    animation-timing-function: ease
   &__button
     position: relative
-    padding: 17px 22px;
+    padding: 17px 22px
 .instagram
   display: flex
   justify-content: center

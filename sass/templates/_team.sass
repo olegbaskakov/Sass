@@ -1,33 +1,55 @@
 .team
-  &__section-title
-    margin: 0 auto
+  &-title
+    margin-bottom: 6rem
+    &__img
+      margin-bottom: 1.3rem
+    &__text
+      margin: 0 auto
+      max-width: 32rem
+      text-align: center
+      font-weight: normal
+      font-size: 1.428rem
+      line-height: 1.92rem
+  &__heading
+    font-style: normal
+    font-size: 1.428rem
+    line-height: 2rem
+    margin-bottom: 1rem
+  &__cards
     max-width: 1028px
+    margin: 0 auto
+    margin-bottom: 3.6rem
   &__card
     position: relative
-    &::after
-      content: ''
-      width: 70px
-      height: 70px
-      position: absolute
-      top: -35px
-      left: -35px
-      background: $primary url(../img/idea-1.svg) no-repeat center
+  &__icon
+    width: 70px
+    height: 70px
+    position: absolute
+    top: -35px
+    left: -35px
+    background: $primary url(../img/idea-1.svg) no-repeat center
+    &-two
+      background: $primary url(../img/idea-2.svg) no-repeat center
+    &-three
+      background: $primary url(../img/idea-3.svg) no-repeat center
   &__text
-    max-width: 233px
-    padding: 22px 21px 68px 21px
-    margin-top: -6rem
+    max-width: 16.624rem
+    padding: 18px 21px 64px 21px
+    margin-top: -6.1rem
     text-align: center
   &__subtitle
     margin: 0
     padding: 0
-    color: #959595
-    font-size: 1.07rem
-    line-height: 1.8rem
+    color: $secondary
+    font-weight: normal
+    font-size: 1.285rem
+    line-height: 1.928rem
   &__pricetag
     width: 100%
-    font-size: 1rem
-    line-height: 1.4rem
+    font-size: 0.9rem
+    line-height: 1rem
     bottom: 0
   &__title
-    font-size: 18px
-    line-height: 25px
+    font-size: 1.285rem
+    line-height: 1.785rem
+    margin-bottom: 0.4rem

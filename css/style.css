@@ -482,6 +482,9 @@ template {
 .col-30 {
   flex-basis: 30%; }
 
+.col-26 {
+  flex-basis: 26%; }
+
 .col-left {
   width: 45%; }
 
@@ -918,43 +921,68 @@ img {
 .swiper-pagination-bullet {
   margin: 0 10px !important; }
 
-.team__section-title {
+.team-title {
+  margin-bottom: 6rem; }
+  .team-title__img {
+    margin-bottom: 1.3rem; }
+  .team-title__text {
+    margin: 0 auto;
+    max-width: 32rem;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.428rem;
+    line-height: 1.92rem; }
+
+.team__heading {
+  font-style: normal;
+  font-size: 1.428rem;
+  line-height: 2rem;
+  margin-bottom: 1rem; }
+
+.team__cards {
+  max-width: 1028px;
   margin: 0 auto;
-  max-width: 1028px; }
+  margin-bottom: 3.6rem; }
 
 .team__card {
   position: relative; }
-  .team__card::after {
-    content: '';
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: -35px;
-    left: -35px;
-    background: #E3B873 url(../img/idea-1.svg) no-repeat center; }
+
+.team__icon {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -35px;
+  left: -35px;
+  background: #E3B873 url(../img/idea-1.svg) no-repeat center; }
+  .team__icon-two {
+    background: #E3B873 url(../img/idea-2.svg) no-repeat center; }
+  .team__icon-three {
+    background: #E3B873 url(../img/idea-3.svg) no-repeat center; }
 
 .team__text {
-  max-width: 233px;
-  padding: 22px 21px 68px 21px;
-  margin-top: -6rem;
+  max-width: 16.624rem;
+  padding: 18px 21px 64px 21px;
+  margin-top: -6.1rem;
   text-align: center; }
 
 .team__subtitle {
   margin: 0;
   padding: 0;
   color: #959595;
-  font-size: 1.07rem;
-  line-height: 1.8rem; }
+  font-weight: normal;
+  font-size: 1.285rem;
+  line-height: 1.928rem; }
 
 .team__pricetag {
   width: 100%;
-  font-size: 1rem;
-  line-height: 1.4rem;
+  font-size: 0.9rem;
+  line-height: 1rem;
   bottom: 0; }
 
 .team__title {
-  font-size: 18px;
-  line-height: 25px; }
+  font-size: 1.285rem;
+  line-height: 1.785rem;
+  margin-bottom: 0.4rem; }
 
 .footer {
   background: #131313 url(../img/footer-bg.jpg) no-repeat center/cover;
@@ -1090,7 +1118,11 @@ img {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .team__title {
+    font-size: 1rem; }
+  .team__subtitle {
+    font-size: 1.1rem; } }
 
 @media screen and (max-width: 760px) {
   .design {
@@ -1111,7 +1143,9 @@ img {
     width: 100%; }
   .types__card {
     margin-bottom: 5rem; }
-  .card__text {
+  .team__card {
+    margin-bottom: 5rem; }
+  .card--left {
     margin-left: 0; }
   .section-title--left {
     text-align: center; }

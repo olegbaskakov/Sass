@@ -77,6 +77,81 @@ $(document).ready(function () {
   next.css('left', prev.width() + 17 + bullets.width() +17);
   bullets.css('left', prev.width() +17);
 
-  new WOW().init();  
+  new WOW().init(); 
+  
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      userName:  {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      userQuestion: "required",
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длинее пятнадцати букв"
+      },
+      userPhone: "Телефон обязателен",
+      userQuestion: "Вопрос обязателен",
+      userEmail: {
+        required: "Обязательно укажите Email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      userName:  {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      userQuestion: "required",
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длинее пятнадцати букв"
+      },
+      userPhone: "Телефон обязателен",
+      userQuestion: "Вопрос обязателен"
+      }
+  });
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      userName:  {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      userQuestion: "required",
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длинее пятнадцати букв"
+      },
+      userPhone: "Телефон обязателен",
+      }
+  });
+
+  $('[type="tel"]').mask('+7 (000) 000-00-00',{placeholder: "+7(___) ___-__-__"});
 
 });

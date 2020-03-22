@@ -158,7 +158,6 @@ $(document).ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [55.786786, 49.142331],
             zoom: 17,
-            scroll: false
         }, {
             searchControlProvider: 'yandex#search'
         }),
@@ -186,6 +185,8 @@ $(document).ready(function () {
 
     myMap.geoObjects
         .add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom')
+
 });
 
 });

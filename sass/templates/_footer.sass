@@ -6,8 +6,10 @@
     background-color: $dark
     padding: 2.5rem 0
   &__wrap
-    max-width: 63.07rem
+    width: 63.07rem
+    max-width: 100%
     margin: auto
+    margin-top: -20rem
     margin-bottom: 3.714rem
     padding: 2.5rem
     background: $black url(../img/footer-form-bg.png) no-repeat center
@@ -37,6 +39,10 @@
       &--full-width
         flex-basis: 100%
         margin-bottom: 2rem
+  &__columns
+    display: flex
+    flex-flow: wrap
+    flex-direction: column
   &__policy
     flex-basis: 100%
     margin-bottom: 3.6rem
@@ -44,3 +50,27 @@
     margin: auto
     font-size: 1.1rem
     padding: 1.1rem 4.2rem
+  &__info
+    margin-bottom: 2rem
+  &--primary
+    max-width: 500px
+    margin: 0 auto
+    margin-bottom: 1.8rem
+    text-align: center
+    font-weight: normal
+    font-size: 1.428rem
+    line-height: 2rem
+    text-align: center
+    text-transform: uppercase
+    color: $primary
+  &__icons
+    display: flex
+    justify-content: space-between
+    max-width: 70px
+    margin: 0 auto
+  &__map
+    width: 925px
+    max-width: 100%
+    min-height: 465px
+    margin: 0 auto
+    margin-bottom: 50px

@@ -2,7 +2,6 @@
 
 $userName = $_POST['userName'];
 $userPhone = $_POST['userPhone'];
-$userEmail = $_POST['userEmail'];
 $userQuestion =$_POST['userQuestion'];
 
 // Load Composer's autoloader
@@ -31,7 +30,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}, его почта: ${userEmail}, его вопрос: $userQuestion";
+    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}, его вопрос: $userQuestion";
 
     if ($mail->send()) {
       echo "ок";
@@ -43,4 +42,3 @@ try {
 } catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
-

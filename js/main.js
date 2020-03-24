@@ -106,6 +106,18 @@ $(document).ready(function () {
         required: "Обязательно укажите Email",
         email: "Введите в формате: name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Форма отправлена мы свяжемся с вами через 10 минут');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
     }
   });
 
@@ -128,7 +140,19 @@ $(document).ready(function () {
       },
       userPhone: "Телефон обязателен",
       userQuestion: "Вопрос обязателен"
-      }
+      },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Форма отправлена мы свяжемся с вами через 10 минут');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
+    }
   });
 
   $('.control__form').validate({
@@ -149,7 +173,19 @@ $(document).ready(function () {
         maxlength: "Имя не длинее пятнадцати букв"
       },
       userPhone: "Телефон обязателен",
-      }
+      },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Форма отправлена мы свяжемся с вами через 10 минут');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
+    }
   });
 
   $('[type="tel"]').mask('+7 (000) 000-00-00',{placeholder: "+7(___) ___-__-__"});

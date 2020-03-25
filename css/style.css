@@ -790,7 +790,7 @@ img {
   flex-basis: 30%; }
 
 .control__label {
-  margin-bottom: -7px; }
+  margin-bottom: -3px; }
 
 .control__input {
   color: #131313; }
@@ -1057,6 +1057,51 @@ img {
     bottom: -2rem;
     padding: 0;
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+
+.praise {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden; }
+  .praise--visible {
+    opacity: 1;
+    visibility: visible; }
+  .praise__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    padding: 4rem 3.5rem 4rem;
+    color: #fff;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center; }
+  .praise__close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    cursor: pointer; }
+  .praise__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.557rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2.428rem;
+    color: #E3B873; }
+  .praise__subtitle {
+    display: inline-block;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.23rem;
+    text-align: center; }
 
 .footer {
   background: #131313 url(../img/footer-bg.jpg) no-repeat center/cover;

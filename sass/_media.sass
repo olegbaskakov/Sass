@@ -96,6 +96,51 @@
   .swiper-slide
     &__text
       flex-basis: 40%
+  .team
+    padding-bottom: 0
+    background: $dark
+    &__cards
+      margin-bottom: 0
+    &__card
+      margin-left: 10%
+    &__bottom-text
+      display: none
+  .control,.footer
+    &__text
+      color: $light
+    &__input
+      &-group
+        color: $light
+        flex-basis: 100%
+        margin-bottom: 5rem
+    &__input
+      border-bottom: 1px solid $light
+      color: $light
+    &__button
+      flex-basis: 100%
+      order: 1
+  .footer
+    background: $dark
+    &__wrap
+      background: $dark
+      margin-top: 0
+      padding: 0
+    &__input
+      &-group
+        &:nth-child(3)
+          margin-bottom: 0rem
+  .control
+    padding-bottom: 0   
+    background: linear-gradient(to bottom, #131313 97%, #fff 3%)    
+    &__input
+      &-group
+        &:nth-child(2)
+          margin-bottom: 0rem
+  .policy
+    margin-bottom: 5rem
+    &__label
+      color: $light
+      justify-content: start
 @media screen and ( max-height: 600px  )
   .hero
     &__scroll-down

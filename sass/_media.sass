@@ -14,6 +14,8 @@
     &__quality
       font-size: 1.14rem
 @media screen and ( max-width: 992px)
+  .team
+    padding-bottom: 20rem
   .clients
     display: none
   .nav
@@ -34,9 +36,8 @@
     &__section-title
       color: $light
     &__text
+      text-align: center !important
       margin: 1.5rem auto
-      font-size: 1.1rem
-      line-height: 1.7rem
   .row
     flex-direction: column
     align-items: center
@@ -49,6 +50,9 @@
     &__card
       margin-bottom: 5rem
   .team
+    &-title
+      &__text
+        text-align: center !important
     &__card
       margin-bottom: 5rem
   .card
@@ -68,6 +72,8 @@
       order: 1
     &__menu
       display: none
+  .control__text
+    font-weight: normal
 @media screen and ( max-width: 570px  )
   .contacts
     &__phone

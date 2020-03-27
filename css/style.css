@@ -1394,6 +1394,8 @@ img {
             justify-content: space-between;
     max-width: 70px;
     margin: 0 auto; }
+  .footer__icon {
+    cursor: pointer; }
   .footer__map {
     width: 925px;
     max-width: 100%;
@@ -1504,6 +1506,8 @@ img {
     font-size: 1.14rem; } }
 
 @media screen and (max-width: 992px) {
+  .team {
+    padding-bottom: 20rem; }
   .clients {
     display: none; }
   .nav {
@@ -1523,9 +1527,8 @@ img {
     .design__section-title {
       color: #fff; }
     .design__text {
-      margin: 1.5rem auto;
-      font-size: 1.1rem;
-      line-height: 1.7rem; }
+      text-align: center !important;
+      margin: 1.5rem auto; }
   .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1543,6 +1546,8 @@ img {
     width: 100%; }
   .types__card {
     margin-bottom: 5rem; }
+  .team-title__text {
+    text-align: center !important; }
   .team__card {
     margin-bottom: 5rem; }
   .card--left {
@@ -1561,7 +1566,9 @@ img {
         -ms-flex-order: 1;
             order: 1; }
   .footer__menu {
-    display: none; } }
+    display: none; }
+  .control__text {
+    font-weight: normal; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {

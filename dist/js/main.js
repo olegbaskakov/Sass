@@ -230,4 +230,36 @@ $(document).ready(function () {
 
 });
 
+var check_if_load = false;
+$(document).ready(function () {
+  $('#map').mouseenter(function () {
+    if (!check_if_load) {
+      check_if_load = true;
+      loadScript("https://api-maps.yandex.ru/2.1/?apikey=855cdcb8-f608-4649-b239-02a21e9bd816&lang=ru_RU", function () {
+        ymaps.ready(initMap);
+      });
+    }
+  });
+function loadScript(url, callback) {
+    var script = document.createElement("script");
+
+    if (script.readyState) {
+      // IE
+      script.onreadystatechange = function () {
+        if (script.readyState == "loaded" || script.readyState == "complete") {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      script.onload = function () {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+});
+
 });

@@ -1646,6 +1646,8 @@ img {
             order: 1; }
   .footer {
     background: #131313; }
+    .footer__map {
+      min-height: 255px; }
     .footer__wrap {
       background: #131313;
       margin-top: 0;

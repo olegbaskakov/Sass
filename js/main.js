@@ -235,7 +235,7 @@ $(document).ready(function () {
   $('#map').mouseenter(function () {
     if (!check_if_load) {
       check_if_load = true;
-      loadScript("https://api-maps.yandex.ru/2.1/?apikey=855cdcb8-f608-4649-b239-02a21e9bd816&lang=ru_RU", function () {
+      loadScript("https://api-maps.yandex.ru/2.1/?apikey=3eda7957-009b-4871-a655-5be7844c8682&lang=ru_RU", function () {
         ymaps.ready(initMap);
       });
     }

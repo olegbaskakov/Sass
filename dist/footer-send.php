@@ -3,6 +3,7 @@
 $userName = $_POST['userName'];
 $userPhone = $_POST['userPhone'];
 $userQuestion =$_POST['userQuestion'];
+$footerCheckbox=$_POST['footercheckboxcheckbox'];
 
 // Load Composer's autoloader
 require 'phpmailer/Exception.php';

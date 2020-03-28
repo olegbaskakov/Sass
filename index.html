@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=3eda7957-009b-4871-a655-5be7844c8682&lang=ru_RU"></script>
   <title>Document</title>
 </head>
 <body>
@@ -145,8 +144,9 @@
           <!-- /.section-title__img -->
         </div>
         <!-- /.section-title_ -->
-        <div class="control__video video wow zoomIn" data-wow-delay="0.5s">
-          <img src="img/play-icon.svg" alt="play-icon" class="video__play" >
+        <div class="control__video video" data-wow-delay="0.5s" id="player">
+          <script src="https://www.youtube.com/iframe_api"></script>
+          <img src="img/play-icon.svg" alt="play-icon" class="video__play wow zoomIn" >
         </div>
         <!-- /.control__video video -->
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
@@ -162,7 +162,7 @@
           <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
             <input type="checkbox" name="policy-checkbox" id="control-policy-checkbox" class="policy__checkbox" checked>
-            <label for="control-policy-checkbox" class="policy__label control__policy-label">я соглашаюсь с обработкой данных</label>
+            <label for="control-policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
         </form>
         <!-- /.form control__form -->
@@ -303,289 +303,117 @@
           <!-- /.section-title__text -->
         </div>
         <!-- /.section-title -->
-        <div class="row">
-          <div class="col-30">
-            <div class="card types__card">
-              <img src="img/design/design-1.jpg" alt="Минимальный" class="card__img">
-              <div class="card__text card--left">
-                <h3 class="card__title">Минимальный</h3>
-                <!-- /.card__title -->
-                <ul class="card__list">
-                  <li class="card__item">Измерительные чертежи</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Перепланировка</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Планировка мебели</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Сантехнический план</li>
-                  <!-- /.card__item -->
-                </ul>
-                <!-- /.card__list -->
-                <strong class="card__pricetag design__pricetag">
-                  150 руб / m<sup>2</sup>
-                </strong>
-                <!-- /.card__pricetag -->
-              </div>
-              <!-- /.card__text -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-          <div class="col-30">
-            <div class="card types__card">
-              <img src="img/design/design-2.jpg" alt="Стандартный" class="card__img">
-              <div class="card__text card--left">
-                <h3 class="card__title">Стандартный</h3>
-                <!-- /.card__title -->
-                <ul class="card__list">
-                  <li class="card__item">Измерительные чертежи</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Перепланировка</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Планировка мебели</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">План потолков</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">План этажей</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">План электрики</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">План света</li>
-                  <!-- /.card__item -->
-                </ul>
-                <!-- /.card__list -->
-                <strong class="card__pricetag design__pricetag">
-                  400 руб / m<sup>2</sup>
-                </strong>
-              </div>
-              <!-- /.card__text -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-          <div class="col-30">
-            <div class="card types__card">
-              <img src="img/design/design-3.jpg" alt="" class="card__img">
-              <div class="card__text card--left">
-                <h3 class="card__title">Полный</h3>
-                <!-- /.card__title -->
-                <ul class="card__list">
-                  <li class="card__item">Измерительные чертежи</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Перепланировка</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Планировка мебели</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">План потолков</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">План этажей</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">План электрики</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">План света</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Стеннные развертки</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">3D визуализация</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Смета на материалы</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Выезд на подбор материалов</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Выбор мебели</li>
-                  <!-- /.card__item -->
-                </ul>
-                <!-- /.card__list --> 
-                <strong class="card__pricetag design__pricetag">
-                  900 руб / m<sup>2</sup>
-                </strong> 
-              </div>
-              <!-- /.card__text -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row --> 
-      </div>
-      <!-- /.container -->
-    </div>
-    <!-- /.section types -->
-
-    <div class="section team">
-      <div class="container">
-        <div class="section-title team-title">
-          <h2 class="section-title__heading team__heading">Наша команда</h2>
-          <!-- /.section-title__heading -->
-          <div class="section-title__img team-title__img">
-            <img src="./img/team.svg" alt="">
-          </div>
-          <!-- /.section-title__img -->
-          <p class="section-title__text team-title__text">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
-          <!-- /.section-title__text -->
-        </div>
-        <!-- /.section-title -->
-        <div class="team__cards">
+        <div class="design__cards">
           <div class="row">
-            <div class="col-26">
-              <div class="card team__card">
-                <div class="team__icon"></div>
-                <img src="img/team/team-1.jpg" alt="Алексей Колмаков" class="card__img">
-                <div class="card__text team__text">
-                  <h3 class="card__title team__title">Алексей Колмаков</h3>
+            <div class="col-30">
+              <div class="card types__card">
+                <img src="img/design/design-1.jpg" alt="Минимальный" class="card__img">
+                <div class="card__text design-card__text card--left">
+                  <h3 class="card__title">Минимальный</h3>
                   <!-- /.card__title -->
-                  <span class="team__subtitle">Проектный менеджер</span>
+                  <ul class="card__list">
+                    <li class="card__item">Измерительные чертежи</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Перепланировка</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Планировка мебели</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Сантехнический план</li>
+                    <!-- /.card__item -->
+                  </ul>
                   <!-- /.card__list -->
-                  <strong class="card__pricetag team__pricetag">Опыт работы 8 лет</strong> 
+                  <strong class="card__pricetag design__pricetag">
+                    150 руб / m<sup>2</sup>
+                  </strong>
+                  <!-- /.card__pricetag -->
                 </div>
                 <!-- /.card__text -->
               </div>
               <!-- /.card -->
             </div>
             <!-- /.col -->
-            <div class="col-26">
-              <div class="card team__card">
-                <div class="team__icon team__icon-two"></div>
-                <img src="img/team/team-2.jpg" alt="Алиса Сухорукова" class="card__img">
-                <div class="card__text team__text">
-                  <h3 class="card__title team__title">Алиса Сухорукова</h3>
+            <div class="col-30">
+              <div class="card types__card">
+                <img src="img/design/design-2.jpg" alt="Стандартный" class="card__img">
+                <div class="card__text card--left">
+                  <h3 class="card__title">Стандартный</h3>
                   <!-- /.card__title -->
-                  <span class="team__subtitle">Дизайнер</span>
+                  <ul class="card__list">
+                    <li class="card__item">Измерительные чертежи</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Перепланировка</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Планировка мебели</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План этажей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План электрики</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План света</li>
+                    <!-- /.card__item -->
+                  </ul>
                   <!-- /.card__list -->
-                  <strong class="card__pricetag team__pricetag">Опыт работы 6 лет</strong> 
+                  <strong class="card__pricetag design__pricetag">
+                    400 руб / m<sup>2</sup>
+                  </strong>
                 </div>
                 <!-- /.card__text -->
               </div>
               <!-- /.card -->
             </div>
             <!-- /.col -->
-            <div class="col-26">
-              <div class="card team__card">
-                <div class="team__icon team__icon-three"></div>
-                <img src="img/team/team-3.jpg" alt="Давид Волынёв" class="card__img">
-                <div class="card__text team__text">
-                  <h3 class="card__title team__title">Давид Волынёв</h3>
+            <div class="col-30">
+              <div class="card types__card">
+                <img src="img/design/design-3.jpg" alt="" class="card__img">
+                <div class="card__text card--left">
+                  <h3 class="card__title">Полный</h3>
                   <!-- /.card__title -->
-                  <span class="team__subtitle">Бригадир</span>
+                  <ul class="card__list">
+                    <li class="card__item">Измерительные чертежи</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Перепланировка</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Планировка мебели</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План этажей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План электрики</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План света</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Стеннные развертки</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">3D визуализация</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Смета на материалы</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Выезд на подбор материалов</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Выбор мебели</li>
+                    <!-- /.card__item -->
+                  </ul>
                   <!-- /.card__list --> 
-                  <strong class="card__pricetag team__pricetag">Опыт работы 7 лет</strong> 
+                  <strong class="card__pricetag design__pricetag">
+                    900 руб / m<sup>2</sup>
+                  </strong> 
                 </div>
                 <!-- /.card__text -->
               </div>
               <!-- /.card -->
             </div>
-            <!-- /.col -->
-          </div>
-        </div>
-        <!-- /.team__cards -->
-        <!-- /.row --> 
-        <p class="control__text team__bottom-text">Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.</p>
-      </div>
-      <!-- /.container -->
-    </div>
-    <!-- /.section team -->
-
-    <div class="section clients">
-      <div class="container">
-        <div class="section-title clients-title">
-          <h2 class="section-title__heading clients-title__heading">Наши клиенты</h2>
-          <!-- /.section-title__heading -->
-          <div class="section-title__img clients-title__img">
-            <img src="./img/clients.svg" alt="">
-          </div>
-          <!-- /.section-title__img -->
-          <p class="section-title__text clients__text">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
-          <!-- /.section-title__text -->
-        </div>
-        <!-- /.section-title -->
-        <div class="clients__cards">
-          <div class="row">
-            <div class="col-30">
-              <div class="card clients__card">
-                <div class="clients__header">
-                  <div class="clients__img">
-                    <img src="img/client-1.png" alt="">
-                  </div>
-                  <h3 class="card__title clients__title">Савельева Екатерина Львовна</h3>
-                </div>
-                <span class="clients__subtitle">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</span>
-                <div class="card__pricetag clients__pricetag">
-                  <div class="card__price">
-                    <img class="price__img" src="img/clients-width.svg" alt="">
-                    <span class="card__quality">40 М <sup>2</sup> </span>
-                  </div>
-                  <!-- /.card__price -->
-                  <div class="card__price">
-                    <img class="price__img" src="img/clients-days.svg" alt="">
-                    <span class="card__quality price--time">48 дней </span>
-                  </div>
-                  <!-- /.card__price -->
-                </div>
-                <!-- /.card__pricetag -->
-              </div>
-              <!-- /.card -->
-            </div>
-            <!-- /.col -->
-            <div class="col-30">
-              <div class="card clients__card">
-                <div class="clients__header">
-                  <div class="clients__img">
-                    <img src="img/client-2.png" alt="">
-                  </div>
-                  <h3 class="card__title clients__title">Большов Михаил Анатольевич</h3>
-                </div>
-                <span class="clients__subtitle">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</span>
-                <div class="card__pricetag clients__pricetag">
-                  <div class="card__price">
-                    <img class="price__img" src="img/clients-width.svg" alt="">
-                    <span class="card__quality">90 М <sup>2</sup> </span>
-                  </div>
-                  <!-- /.card__price -->
-                  <div class="card__price">
-                    <img class="price__img" src="img/clients-days.svg" alt="">
-                    <span class="card__quality price--time">128 дней </span>
-                  </div>
-                  <!-- /.card__price -->
-                </div>
-                <!-- /.card__pricetag -->
-              </div>
-              <!-- /.card -->
-            </div>
-            <!-- /.col -->
-            <div class="col-30">
-              <div class="card clients__card">
-                <div class="clients__header">
-                  <div class="clients__img">
-                    <img src="img/client-3.png" alt="">
-                  </div>
-                  <h3 class="card__title clients__title">Хасанов Даниил Муратович</h3>
-                </div>
-                <span class="clients__subtitle">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</span>
-                <div class="card__pricetag clients__pricetag">
-                  <div class="card__price">
-                    <img class="price__img" src="img/clients-width.svg" alt="">
-                    <span class="card__quality">56 М <sup>2</sup> </span>
-                  </div>
-                  <!-- /.card__price -->
-                  <div class="card__price">
-                    <img class="price__img" src="img/clients-days.svg" alt="">
-                    <span class="card__quality price--time">86 дней </span>
-                  </div>
-                  <!-- /.card__price -->
-                </div>
-                <!-- /.card__pricetag -->
-              </div>
-              <!-- /.card -->
-            </div>
-            <!-- /.col -->
             <!-- /.col -->
           </div>
           <!-- /.row -->
         </div>
-        <!-- /.types__cards --> 
+        <!-- /.design__cards --> 
       </div>
       <!-- /.container -->
     </div>
+    <!-- /.section types -->
 
   </main>
 
@@ -609,8 +437,9 @@
             <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="footer-user-question" placeholder="Я хочу спросить">
           </div>
           <div class="policy footer__policy">
-            <input type="checkbox" name="policy-checkbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
-            <label for="footer-policy-checkbox" class="policy__label policy__label--center">я соглашаюсь с обработкой данных</label>
+            <input type="checkbox" name="footerCheckbox" id="footer-policy-checkbox" class="policy__checkbox" checked aria-describedby="footerCheckbox-error">
+            <div id="footerCheckbox-error" class="invalid-form" >Нужно согласие на обработку данных</div>
+            <label for="footer-policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь на обработку данных</label>
           </div>
           <button class="button button--primary footer__button">Отправить</button>
         </form>
@@ -621,10 +450,10 @@
         <h2 class="footer__title footer--primary">Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768 32 99</h2>
         <div class="footer__icons">
           <a href="https://www.whatsapp.com/" class="footer__icon" target = "_blank">
-            <img src="img/sms.svg" alt="">
+            <img class="footer__icon-img" src="img/sms.svg" alt="">
           </a>
           <a href="https://www.instagram.com" class="footer__icon" target = "_blank">
-            <img  src="img/instagram.svg" alt="">
+            <img  class="footer__icon-img" src="img/instagram.svg" alt="">
           </a>
         </div>
       </div>
@@ -648,7 +477,7 @@
             <a href="#" class="nav__item">Отзывы</a>
             <a href="#" class="nav__item">Контакты</a>
           </nav>
-          <div class="contacts menu__contacts">
+          <div class="contacts menu__contacts footer__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
             <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
           </div>

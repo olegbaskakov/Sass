@@ -1,5 +1,5 @@
 /*
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
   const modal = document.querySelector('.modal');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
   const closeBtn = document.querySelector('.modal__close');
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (event.target === modal || event.keyCode  === 27);
       modal.classList.remove('modal--visible');
   }
- 
+
   modalBtn.forEach(element => {
     element.addEventListener('click', switchModal);
   });
@@ -21,8 +21,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.addEventListener('keydown', closeModal);
 });
 */
-
+var check_if_load = false;
 $(document).ready(function () {
+  $('#map').mouseenter(function () {
+    if (!check_if_load) {
+      check_if_load = true;
+      loadScript("https://api-maps.yandex.ru/2.1/?apikey=855cdcb8-f608-4649-b239-02a21e9bd816&lang=ru_RU", function () {
+        ymaps.ready(initMap);
+      });
+    }
+  });
   var modal = $('.modal'),
       praise = $('.praise'),
       modalBtn = $('[data-toggle=modal]'),
@@ -84,8 +92,8 @@ $(document).ready(function () {
   next.css('left', prev.width() + 17 + bullets.width() +17);
   bullets.css('left', prev.width() +17);
 
-  new WOW().init(); 
-  
+  new WOW().init();
+
   $('.modal__form').validate({
     errorClass: "invalid",
     rules: {
@@ -138,6 +146,7 @@ $(document).ready(function () {
       },
       userPhone: "required",
       userQuestion: "required",
+      footerCheckbox: "required",
     },
     messages: {
       userName: {
@@ -146,7 +155,8 @@ $(document).ready(function () {
         maxlength: "Имя не длинее пятнадцати букв"
       },
       userPhone: "Телефон обязателен",
-      userQuestion: "Вопрос обязателен"
+      userQuestion: "Вопрос обязателен",
+      policyCheckbox: "Подтвердите согласие на обработку данных"
       },
     submitHandler: function(form) {
       $.ajax({
@@ -193,54 +203,8 @@ $(document).ready(function () {
     }
   });
 
-  $('[type="tel"]').mask('+7 (000) 000-00-00',{placeholder: "+7(___) ___-__-__"});
-
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.786786, 49.142331],
-            zoom: 17,
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Наш офис',
-            balloonContent: 'Вход со двора'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/marker.png',
-            // Размеры метки.
-            iconImageSize: [40, 40],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        });
-
-    myMap.geoObjects
-        .add(myPlacemark);
-    myMap.behaviors.disable('scrollZoom')
-
-});
-
-var check_if_load = false;
-$(document).ready(function () {
-  $('#map').mouseenter(function () {
-    if (!check_if_load) {
-      check_if_load = true;
-      loadScript("https://api-maps.yandex.ru/2.1/?apikey=3eda7957-009b-4871-a655-5be7844c8682&lang=ru_RU", function () {
-        ymaps.ready(initMap);
-      });
-    }
-  });
-function loadScript(url, callback) {
+  $('[type="tel"]').mask('+7 (000) 000-00-00',{placeholder: "Ваш номер телефона"});
+  function loadScript(url, callback) {
     var script = document.createElement("script");
 
     if (script.readyState) {
@@ -260,6 +224,44 @@ function loadScript(url, callback) {
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
   }
+
+  function initMap() {
+    var myMap = new ymaps.Map('map', {
+        center: [55.751574, 37.573856],
+        zoom: 9
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'),
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Наш офис',
+        balloonContent: 'Вход со двора'
+      }, {
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/marker.png',
+        // Размеры метки.
+        iconImageSize: [50, 50],
+        iconImageOffset: [-5, -38]
+      });
+    myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
+  }
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '460',
+      width: '100%',
+      videoId: 'RHzzLqJWqHs',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  });
+  function videoPlay(event){
+    event.target.playVideo();
+  }
 });
 
-});

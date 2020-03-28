@@ -48,19 +48,20 @@
     width: 100%
   .types
     &__card
-      margin-bottom: 5rem
+      margin-bottom: 6rem
   .team
     &-title
       &__text
         text-align: center !important
     &__card
-      margin-bottom: 5rem
+      margin-bottom: 6rem
   .card
     &--left
       margin-left: 0
   .section-title
     &--left
       text-align: center
+      margin-bottom: 0
     &__text
       text-align: left
     &__word
@@ -75,6 +76,18 @@
   .control__text
     font-weight: normal
 @media screen and ( max-width: 570px  )
+  .section
+    &-title
+      &--left
+        margin-bottom: 2rem
+      &__heading
+        margin-bottom: 2rem
+      &__text
+        &-slide
+          font-style: normal
+          font-weight: normal
+          font-size: 1.2rem
+          line-height: 158.48%
   .contacts
     &__phone
       margin-right: 0
@@ -91,17 +104,33 @@
       display: none
     &__content
       padding: 0
+    &__title
+      max-width: 25rem
+      font-style: normal
+      font-weight: normal
+      font-size: 2rem
+      line-height: 2.5rem
     &__text
       max-width: 28.57rem
-      font-size: 1.29rem
+      font-size: 1.5rem
+      line-height: 2rem
     &__button
       max-width: 100%
       display: block
       width: 40rem
       margin-bottom: 1.85rem
   .swiper-slide
+    &__heading
+      margin-bottom: 1.1rem
+      font-style: normal
+      font-weight: normal
+      font-size: 1.2rem
+      line-height: 138.6%
     &__text
-      flex-basis: 40%
+      flex-basis: 45%
+      padding-bottom: 1.6rem
+    &__value
+      font-size: 1.2rem
   .team
     padding-bottom: 0
     background: $dark
@@ -111,7 +140,7 @@
       margin-left: 10%
     &__bottom-text
       display: none
-  .control,.footer
+  .control,
     &__text
       color: $light
     &__input
@@ -129,14 +158,47 @@
     background: $dark
     &__map
       min-height: 255px
+      margin-bottom: 3.4rem
+    &__title
+      font-style: normal
+      font-weight: normal
+      font-size: 1.6rem
+      line-height: 2rem
+      margin-bottom: 4.5rem
+    &--primary
+      font-style: normal
+      font-weight: normal
+      font-size: 1.4rem
+      line-height: 2rem
+      margin-bottom: 2rem
     &__wrap
       background: $dark
       margin-top: 0
       padding: 0
+    &__text
+      color: $light
     &__input
+      padding: 0.5 rem 0
       &-group
+        color: $light
+        flex-basis: 100%
+        margin-bottom: 5.2rem
         &:nth-child(3)
-          margin-bottom: 0rem
+          margin-bottom: 0.3rem
+    &__input
+      border-bottom: 1px solid $light
+      color: $light
+    &__policy
+      margin-bottom: 5.3rem !important
+    &__button
+      flex-basis: 100%
+      order: 1
+      padding: 1.4rem 4.2rem
+    &__icons
+      max-width: 100px
+    &__icon
+      &-img
+        width: 40px
   .control
     padding-bottom: 0   
     background: linear-gradient(to bottom, #131313 97%, #fff 3%)    
@@ -144,11 +206,79 @@
       &-group
         &:nth-child(2)
           margin-bottom: 0rem
+    &__heading
+      font-size: 1.8rem
+    &__video
+      min-height: 207px
+      margin-bottom: 2.1rem
+    &__text
+      font-style: normal
+      font-weight: normal
+      font-size: 1.2rem
+      line-height: 169.8%
+      margin-bottom: 2.6rem
+      &::before
+        margin-bottom: 1rem
+    &__policy
+      margin-left: 0
+  .video__play
+    width: 20%
   .policy
     margin-bottom: 5rem
     &__label
       color: $light
       justify-content: start
+      font-style: normal
+      font-weight: normal
+      font-size: 1.3rem
+      line-height: 2rem
+  .types
+    padding-top: 5.3rem
+    &__section
+      &-title
+        margin-bottom: 3.3rem
+    &__heading
+      font-size: 1.8rem
+      margin-bottom: 1.5red
+  .design
+    &__heading
+      font-size: 1.8rem
+      margin-bottom: 1.5rem
+    &__text
+      width: 80%
+      font-style: normal
+      font-weight: normal
+      font-size: 1.1rem
+      line-height: 1.75rem
+    &-card
+      &__text
+        padding: 1.7rem 2.6rem 1.2rem
+    &__pricetag
+      bottom: -1.7rem !important
+      padding: 0.8rem 4rem !important
+  .card
+    &__text
+      margin-top: -12.2rem
+      max-width: 22.5rem
+    &__pricetag
+      position: absolute
+      padding: 0.8rem 2.8rem
+      font-style: normal
+      font-weight: normal
+      font-size: 1.25rem
+      line-height: 138.6%
+      bottom: -1.1rem
+  .form
+    &__label
+      font-style: normal
+      font-weight: normal
+      font-size: 1.2rem
+      line-height: 1.6rem
+    &__input
+      font-style: normal
+      font-weight: normal
+      font-size: 1.5rem
+      line-height: 1.6rem
 @media screen and ( max-height: 600px  )
   .hero
     &__scroll-down
